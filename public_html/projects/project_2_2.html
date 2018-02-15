@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+   <!-- <link rel="stylesheet" href="styles/960.css"> -->
+     <link rel="shortcut icon"  type="image/x-icon" href="images/ape.png">
+    <link rel="stylesheet" href="styles/project_2.css">
+    <style>    
+    </style>
+    <title>B.A.P.E</title>
+    <!--<script type="text/javascript" src="project_2.js"></script>-->
+    <script type="text/javascript" src="ben1.js"></script>
+    <script type="text/javascript" src="ben2.js"></script>
+  </head>
+  <body onload="loadPlan()" >
+  <div id ="header"> 
+    <h1 style="display:inline-block">Better Academic Planning Enivornment</h1>
+                <li>Save</li>
+                <li>Options
+                <div class="dropdown1 ">
+                     <ul>
+                       <li><a style ="padding: 15px 20 px;" href="projects/cornDogs.html">Part 1</a></li>
+                      <li><a href="projects/cornDogsA.html">Part 2</a></li>
+                     </ul>
+                  </div>
+                </li>
+                <li>Login</li>
+  </div> 
+  <div id = "middle">
+    <div class="nav"> 
+        <label class="semester">Course Requirements</label>
+      </div>
+    <div id = "classes" class="classes" >
+        
+     
+    </div>
+  </div>
+ 
+  <div id ="bottum">
+     <div class="missing"> 
+        Validation Status
+        <ul>
+           <li><a href="http://judah.cedarville.edu/~lpizarr/cs3220.html">Home</a></li>
+         <!--  <li><a href="http://judah.cedarville.edu">PCA</a></li>
+           <li><a href="cornDogs.html">The Truth About Corn Dogs</a></li> -->
+        </ul>
+        
+        <form name="myForm" onsubmit="myFunction()">
+            Number: <input type="text" name="pNumber" placeholder= "1-800-123-1234" required><br>
+            Password: <input type="password" name="fname"  placeholder= "********"  required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must enter a valid pasword containing a lower case, upper case, number, and special character."
+            ><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+    <script>
+        function myFunction() {
+            var x=document.forms["myForm"]["pNumber"].value;
+            if (isNaN(x)) {
+              alert("Must input a phone number");
+              return false;
+            }
+            if (x.length < 11) {
+              alert("Too short! Must input a phone number");
+              return false;
+            }
+            alert("The form was submitted");
+            
+        }
+    </script>
+        
+    </div> 
+  
+    <div class="derp"> 
+       <h1>Course Finder</h1> 
+    </div>
+  </div>
+    
+  </body>
+</html>
+
