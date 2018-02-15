@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Project 2</title>
+		<link href="matrix.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="matrix.js"></script>
+	</head>
+
+	<body onload="load()">
+		<canvas id="matrix"></canvas>
+
+		<!-- center box -->
+		<div class="pad">
+
+		</div>
+
+		<div id="main">
+			<div class="inner_pad"></div>
+			<div id="#actual_content">
+			<h1>Log In</h1><br>
+			<form id="myform" name="myForm" onsubmit="myFunction()">
+				<label for="uname"><b>Username</b><label><br>
+				<input type="text" placeholder="Enter Username" id="uname" name="uname" required><br><br>
+				<label for="pwd"><b>Password</b><label><br>
+				<input  type="password"
+						placeholder="Enter Password"
+						id="pwd"
+						name="pwd"
+						pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+						title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+						required><br><br>
+				<button type="submit">Submit</button>
+			 </form>
+		 </div>
+		 <div class="inner_pad"></div>
+		</div>
+
+		<div class="pad">
+
+		</div>
+
+
+	</body>
+</html>
