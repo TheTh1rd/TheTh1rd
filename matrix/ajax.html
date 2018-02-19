@@ -6,68 +6,44 @@
 <title> Ajax Adder </title>
 <script type="text/javascript">
 
-  var req = false;
-  function doCalculation() {
-    createRequest();
-    if (!req) {
-        alert("Cannot make request");
-    }
-    else {
-	var firstElem = document.getElementById("firstnum");
-	var secondElem = document.getElementById("secondnum");
-        var first = firstElem.value;
-        var second = secondElem.value;
-        var myURL = "http://judah/~gallaghd/cs4220/ajax/ajaxAdder.php?firstnum="+
-		first+"&secondnum="+second;
-        req.open ("GET", myURL, true);
-        req.onreadystatechange = myCallbackFunction;
-        req.send(null);
-    }
-  }
-
-  function createRequest() {
+  var request = false;
+  var addressObject = {};
+  function createRequest () {
     if(window.XMLHttpRequest && !(window.ActiveXObject)) {
         try {
-            req = new XMLHttpRequest();
+            request= new XMLHttpRequest();
         }
         catch(e) {
-            req = false;
+            request= false;
         }
     }
     else if (window.ActiveXObject) {
         try {
-            req = new ActiveXObject("Msxml2.XMLHTTP");
+            request= new ActiveXObject("Msxml2.XMLHTTP");
         }
-        catch(e) {
-            try {
-                 req = new ActiveXObject("Microsoft.XMLHTTP");
+         catch(e) {
+             try {
+                 request= new ActiveXObject("Microsoft.XMLHTTP");
             }
-            catch(e) { req = false; }
+            catch(e) {request= false; }
         }
     }
-  }
+}
+function myCallbackFunction () {
+      if (request.readyState == 4) {
+          var myData = request.responseText;
+          // do something cool with the myData
+          addressObject = JSON.parse(myData);
 
-  function myCallbackFunction() {
-    if (req.readyState == 4) {
-        var myData = req.responseText;
-	var para = document.getElementById("output");
-	if (para == null) {
-	  alert ("para was null");
-
-	}
-	clearText(para);
-	var childNode = document.createTextNode(myData);
-	para.appendChild(childNode);
-    }
-  }
-
-  function clearText(para) {
-    if (para != null) {
-      if (para.childNodes) {
-	for (var i=0; i < para.childNodes.length; i++) {
-	  para.removeChild(para.childNodes[i]);
-	}
       }
+  }
+  function getPlan() {
+    var myURL = "judah/~gallaghd/cs3220/termProject/getCombined.php"
+    createRequest();
+    if (request) {
+        request.open (“GET”, myURL, true);
+        request.onreadystatechange = myCallbackFunction;
+        request.send(null);
     }
   }
 
@@ -77,15 +53,15 @@
 </head>
 <body>
 <form method="GET" >
-    <input type="text" id="firstnum" value="0" size="15" onChange="doCalculation();"/> First Num<br />
-    <input type="text" id="secondnum" value="0" size="15" onChange="doCalculation();" /> Second Num <br />
+    <input type="text" id="firstnum" value="0" size="15" onChange="getPlan();"/> First Num<br />
+    <input type="text" id="secondnum" value="0" size="15" onChange="getPlan();" /> Second Num <br />
     <br/>
     <br/>
 The result is:
     <span id="output"></span>
     <br/>
     <br/>
-    <input type="button" id="calc" value="Calc Sum" onClick="doCalculation();" />
+    <input type="button" id="calc" value="Calc Sum" onClick="getPlan();" />
 </form>
 </body>
 </html>
