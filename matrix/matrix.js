@@ -54,5 +54,15 @@ function load() {
 }
 
 function validate() {
+	// prevent page reload
+	event.preventDefault();
+
+	// fade out box
 	$("#login").fadeOut("slow");
+
+	// overwrite inner html
+	var newPage = document.getElementById("page");
+	var html = "<div id =\"header\"><h1 style=\"display:inline-block\">Better Academic Planning Enivornment</h1><li>Save</li><li>Options<div class=\"dropdown1 \"><ul><li><a style =\"padding: 15px 20 px;\" href=\"projects/cornDogs.html\">Part 1</a></li><li><a href=\"projects/cornDogsA.html\">Part 2</a></li></ul></div></li><li>Login</li></div>"
+  html += "<div id = \"middle\"><div class=\"nav\"><label class=\"semester\">Course Requirements</label></div><div id = \"classes\" class=\"classes\" ></div></div>"
+	newPage.innerHTML = html;
 }

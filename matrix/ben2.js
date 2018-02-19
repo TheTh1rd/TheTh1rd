@@ -8,11 +8,11 @@ class Plan {
 		this.courses = courses;
 		this.years = years;
 	}
-
+	
 	addCourse(newCourse) {
 		this.courses.push(newCourse);
 	}
-
+		
 }
 
 class Course {
@@ -22,7 +22,7 @@ class Course {
 		this.designator = designator;
 		this.name = name;
 	}
-
+	
 	getTerm() {
 		return this.term;
 	}

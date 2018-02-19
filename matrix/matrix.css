@@ -17,6 +17,16 @@ html, body{
 	 background: black;
 }
 
+#page {
+	height: 99%;
+	width: 99%;
+}
+
+#test {
+	position: fixed;
+	color: white;
+}
+
 canvas {
 	display: block;
 	position: fixed;
