@@ -95,6 +95,29 @@ h1 {
 	color: #0F0;
 }
 
+/* scroll bar styling */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+		border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8);
+		border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0F0;
+}
+
 /* ============================imported css ===============================
 ===========================================================================
 ===========================================================================
@@ -111,10 +134,10 @@ h1 {
 			 -webkit-border-radius: 10px;
 			 border-radius: 10px;
 			 float:right;
-
+			 border-color: #0F0;
 			 font-family:Arial, Helvetica, sans-serif;
 			 font-size:16px;
-			 color: #49274A;
+			 color: #0F0;
 			 outline:0;
 			 text-decoration:none;
 			 text-shadow: 1px 1px 1px #000;
@@ -125,8 +148,8 @@ h1 {
 	 }
 
 #header li:hover {
-			 color:#161616;
-			 text-shadow: 1px 1px 1px #FFFFFF;
+			 color:#0F0;
+			 text-shadow: 1px 1px 1px #0F0;
 			 background: rgba(0, 0, 0, 0.8);
 			/* background: -moz-linear-gradient(top, #F8EEE7, #F8EEE7);
 			 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F8EEE7), to(#F8EEE7));
@@ -262,7 +285,7 @@ h1 {
 			 border: 1px solid #0F0;
 			 border-top: none;
 
-			 background: #rgba(0, 0, 0, 0.8);
+			 background: rgba(0, 0, 0, 0.8);
 			/*background: -moz-linear-gradient(top, #EEEEEE, #BBBBBB);
 			 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from (#EEEEEE), to(#BBBBBB));
 			 */
@@ -284,15 +307,15 @@ h1 {
 		}
 
 		.dropdown1 li:hover{
-			color:#161616;
+			color:#0F0;
 		}
 		.dropdown1 a{
-			color:#FFFFFF;
+			color:#0F0;
 		}
 		.dropdown1 a:hover{
-			color:#161616;
+			color:#0F0;
 		}
 		.dropdown1 :hover{
-			color:#161616;
-			border-color: #161616;
+			color:#0F0;
+			border-color: #0F0;
 		}

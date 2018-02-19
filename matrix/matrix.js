@@ -21,6 +21,10 @@ function load() {
 	for(var x = 0; x < columns; x++)
 		drops[x] = 1;
 
+	for (var i = 0; i < drops.length; i++) {
+		drops[i] = c.height*font_size;
+	}
+
 	//drawing the characters
 	function draw()
 	{
@@ -42,7 +46,7 @@ function load() {
 
 			//sending the drop back to the top randomly after it has crossed the screen
 			//adding a randomness to the reset to make the drops scattered on the Y axis
-			if(drops[i]*font_size > c.height && Math.random() > 0.975)
+			if(drops[i]*font_size > c.height && Math.random() > 0.985)
 				drops[i] = 0;
 
 			//incrementing Y coordinate
@@ -58,7 +62,7 @@ function validate() {
 	event.preventDefault();
 
 	// fade out box
-	$("#page").fadeOut("slow");
+	$("#page").slideUp(1000);
 	$("#page").hide();
 
 	// overwrite inner html
@@ -71,5 +75,14 @@ function validate() {
 
 	loadPlan();
 
-	$("#page").fadeIn("slow");
+	$("#header").hide();
+	$("#bottum").hide();
+	$("#middle").hide();
+
+	$("#page").fadeIn();
+	$("#header").slideDown(1000);
+	$("#bottum").delay(1500).slideDown(1000);
+	$("#middle").delay(3500).slideDown(5000);
+
+
 }
