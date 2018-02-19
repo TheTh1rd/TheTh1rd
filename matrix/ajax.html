@@ -1,0 +1,65 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "DTD/xhtml1-transitional.dt">
+<html>
+<head>
+<title> Ajax Adder </title>
+<script type="text/javascript">
+
+  var request = false;
+  var addressObject = {};
+  var html ="doing things?";
+  function createRequest () {
+    if(window.XMLHttpRequest && !(window.ActiveXObject)) {
+        try {
+            request= new XMLHttpRequest();
+        }
+        catch(e) {
+            request= false;
+        }
+    }
+    else if (window.ActiveXObject) {
+        try {
+            request= new ActiveXObject("Msxml2.XMLHTTP");
+        }
+         catch(e) {
+             try {
+                 request= new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch(e) {request= false; }
+        }
+    }
+}
+function myCallbackFunction () {
+      if (request.readyState == 4) {
+          var myData = request.responseText;
+          // do something cool with the myData
+          addressObject = JSON.parse(myData);
+          html+= addressObject.plan.courses[0];
+      }
+  }
+  function getPlan() {
+    var myURL = "judah/~gallaghd/cs3220/termProject/getCombined.php"
+    createRequest();
+    if (request) {
+        request.open (“GET”, myURL, true);
+        request.onreadystatechange = myCallbackFunction;
+        request.send();
+        let derp2 = document.getElementById("classes");
+    	  derp2.innterHTML = html;
+
+    }
+  }
+
+</script>
+
+
+</head>
+<body onload = "getPlan()">
+  <div>
+    <p>There Should be something below.</p>
+  </div>
+  <div id="classes">
+  </div>
+</body>
+</html>
