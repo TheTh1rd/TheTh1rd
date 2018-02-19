@@ -51,5 +51,8 @@ function load() {
 	}
 
 	setInterval(draw, 40);
+}
 
+function validate() {
+		alert("this sucks");
 }
