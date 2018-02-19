@@ -8,6 +8,7 @@
 
   var request = false;
   var addressObject = {};
+  var html ="doing things?";
   function createRequest () {
     if(window.XMLHttpRequest && !(window.ActiveXObject)) {
         try {
@@ -34,7 +35,7 @@ function myCallbackFunction () {
           var myData = request.responseText;
           // do something cool with the myData
           addressObject = JSON.parse(myData);
-
+          html+= addressObject.plan.courses[0];
       }
   }
   function getPlan() {
@@ -43,7 +44,10 @@ function myCallbackFunction () {
     if (request) {
         request.open (“GET”, myURL, true);
         request.onreadystatechange = myCallbackFunction;
-        request.send(null);
+        request.send();
+        let derp2 = document.getElementById("classes");
+    	  derp2.innterHTML = html;
+
     }
   }
 
@@ -51,17 +55,11 @@ function myCallbackFunction () {
 
 
 </head>
-<body>
-<form method="GET" >
-    <input type="text" id="firstnum" value="0" size="15" onChange="getPlan();"/> First Num<br />
-    <input type="text" id="secondnum" value="0" size="15" onChange="getPlan();" /> Second Num <br />
-    <br/>
-    <br/>
-The result is:
-    <span id="output"></span>
-    <br/>
-    <br/>
-    <input type="button" id="calc" value="Calc Sum" onClick="getPlan();" />
-</form>
+<body onload = "getPlan()">
+  <div>
+    <p>There Should be something below.</p>
+  </div>
+  <div id="classes">
+  </div>
 </body>
 </html>
