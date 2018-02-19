@@ -54,5 +54,5 @@ function load() {
 }
 
 function validate() {
-		alert("this sucks");
+	$("#login").fadeOut("slow");
 }
