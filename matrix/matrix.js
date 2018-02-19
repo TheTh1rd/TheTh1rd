@@ -58,11 +58,18 @@ function validate() {
 	event.preventDefault();
 
 	// fade out box
-	$("#login").fadeOut("slow");
+	$("#page").fadeOut("slow");
+	$("#page").hide();
 
 	// overwrite inner html
 	var newPage = document.getElementById("page");
-	var html = "<div id =\"header\"><h1 style=\"display:inline-block\">Better Academic Planning Enivornment</h1><li>Save</li><li>Options<div class=\"dropdown1 \"><ul><li><a style =\"padding: 15px 20 px;\" href=\"projects/cornDogs.html\">Part 1</a></li><li><a href=\"projects/cornDogsA.html\">Part 2</a></li></ul></div></li><li>Login</li></div>"
-  html += "<div id = \"middle\"><div class=\"nav\"><label class=\"semester\">Course Requirements</label></div><div id = \"classes\" class=\"classes\" ></div></div>"
+	var html = "<div id =\"header\"><h1 style=\"display:inline-block\">Better Academic Planning Enivornment</h1><li>Save</li><li>Options<div class=\"dropdown1 \"><ul><li><a style =\"padding: 15px 20 px;\" href=\"projects/cornDogs.html\">Part 1</a></li><li><a href=\"projects/cornDogsA.html\">Part 2</a></li></ul></div></li><li>Login</li></div>";
+  html += "<div id = \"middle\"><div class=\"nav\"><label class=\"semester\">Course Requirements</label></div><div id = \"classes\" class=\"classes\" ></div></div>";
+	html += "<div id =\"bottum\"><div class=\"missing\">Validation Status<ul><li><a href=\"http://judah.cedarville.edu/~lpizarr/cs3220.html\">Home</a></li><!--  <li><a href=\"http://judah.cedarville.edu\">PCA</a></li><li><a href=\"cornDogs.html\">The Truth About Corn Dogs</a></li> --></ul></div><div class=\"derp\"><h1>Course Finder</h1></div></div>";
+
 	newPage.innerHTML = html;
+
+	loadPlan();
+
+	$("#page").fadeIn("slow");
 }
