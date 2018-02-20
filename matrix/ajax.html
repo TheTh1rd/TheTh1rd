@@ -35,7 +35,7 @@ function myCallbackFunction () {
           var myData = request.responseText;
           // do something cool with the myData
           addressObject = JSON.parse(myData);
-          html+= addressObject.plan.courses[0];
+          html+= addressObject;
       }
   }
   function getPlan() {
