@@ -45,31 +45,6 @@
            <li><a href=\"cornDogs.html\">The Truth About Corn Dogs</a></li> -->
         </ul>
 
-        <form name=\"myForm\" onsubmit=\"myFunction()\">
-            Number: <input type=\"text\" name=\"pNumber\" placeholder= \"1-800-123-1234\" required><br>
-            Password: <input type=\"password\" name=\"fname\"  placeholder= \"********\"  required
-            pattern=\"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}\"
-            title=\"Must enter a valid pasword containing a lower case, upper case, number, and special character.\"
-            ><br><br>
-            <input type=\"submit\" value=\"Submit\">
-        </form>
-
-    <script>
-        function myFunction() {
-            var x=document.forms[\"myForm\"][\"pNumber\"].value;
-            if (isNaN(x)) {
-              alert(\"Must input a phone number\");
-              return false;
-            }
-            if (x.length < 11) {
-              alert(\"Too short! Must input a phone number\");
-              return false;
-            }
-            alert(\"The form was submitted\");
-
-        }
-    </script>
-
     </div>
 
     <div class=\"derp\">

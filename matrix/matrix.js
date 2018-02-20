@@ -80,9 +80,9 @@ function validate() {
 	$("#middle").hide();
 
 	$("#page").fadeIn();
-	$("#header").slideDown(1000);
-	$("#bottum").delay(1500).slideDown(1000);
-	$("#middle").delay(3500).slideDown(5000);
+	$("#header").slideDown(1000).delay(1000);
+	$("#bottum").delay(1500).fadeIn(1000);
+	$("#middle").delay(2500).slideDown(1000);
 
 
 }
