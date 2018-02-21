@@ -29,12 +29,15 @@ function load() {
 	function draw()
 	{
 
+		var color = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
+		//document.documentElement.getPropertyValue('--background-color');
+
 		//Black BG for the canvas
 		//translucent BG to show trail
 		ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
 		ctx.fillRect(0, 0, c.width, c.height);
 
-		ctx.fillStyle = "#0F0"; //green text
+		ctx.fillStyle = color; //green text
 		ctx.font = font_size + "px arial";
 		//looping over drops
 		for(var i = 0; i < drops.length; i++)
