@@ -2,6 +2,12 @@
 * {
 	margin: 0; padding: 0;
 }
+
+:root {
+	--text-color: #0f1;
+	--background-color: rgba(0, 0, 0, 0.8);
+}
+
 /*adding a black bg to the body to make things clearer*/
 html, body{
    height: 99%;
@@ -32,11 +38,11 @@ canvas {
 	padding: 0px;
 	align-content: center;
 	text-align: center;
-	color: #0f0;
+	color: var(--text-color);
 }
 
 input::placeholder {
-	color: #0f0;
+	color: var(--text-color);
 }
 
 
@@ -45,21 +51,21 @@ outline: none;
 }
 
 #myform input{
-	background-color: rgba(0, 0, 0, 0.8);
-	border: 1px solid #0f0;
+	background-color: var(--background-color);
+	border: 1px solid var(--text-color);
 	border-radius: 10px;
 
 	padding: 3px;
 
 	text-align: center;
-	color: #0f0;
+	color: var(--text-color);
 }
 
 #myform button {
-	background-color: rgba(0, 0, 0, 0.8);
-	border: 1px solid #0f0;
+	background-color: var(--background-color);
+	border: 1px solid var(--text-color);
 	border-radius: 7px;
-	color: #0f0;
+	color: var(--text-color);
 	padding: 5px;
 	padding-left: 25px;
 	padding-right: 25px;
@@ -69,9 +75,9 @@ outline: none;
 	margin: 0 auto;
 	height: 33%;
 	width: 33%;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: var(--background-color);
 
-	border: 4px solid #0F0;
+	border: 4px solid var(--text-color);
 	border-radius: 10px;
 	position: sticky;
 
@@ -92,7 +98,7 @@ outline: none;
 }
 
 h1 {
-	color: #0F0;
+	color: var(--text-color);
 }
 
 /* scroll bar styling */
@@ -104,18 +110,18 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--background-color);
 		border-radius: 3px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--background-color);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #0F0;
+    background: var(--text-color);
 }
 
 /* ============================imported css ===============================
@@ -134,27 +140,27 @@ h1 {
 			 -webkit-border-radius: 10px;
 			 border-radius: 10px;
 			 float:right;
-			 border-color: #0F0;
+			 border-color: var(--text-color);
 			 font-family:Arial, Helvetica, sans-serif;
 			 font-size:16px;
-			 color: #0F0;
+			 color: var(--text-color);
 			 outline:0;
 			 text-decoration:none;
 			 text-shadow: 1px 1px 1px #000;
-			 background: rgba(0, 0, 0, 0.8);
+			 background: var(--background-color);
 			 /*background: -moz-linear-gradient(top, #F8EEE7, #F4DECB);
 			 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F8EEE7), to(#F4DECB));
 			 */
 	 }
 
 #header li:hover {
-			 color:#0F0;
-			 text-shadow: 1px 1px 1px #0F0;
-			 background: rgba(0, 0, 0, 0.8);
+			 color:var(--text-color);
+			 text-shadow: 1px 1px 1px var(--text-color);
+			 background: var(--background-color);
 			/* background: -moz-linear-gradient(top, #F8EEE7, #F8EEE7);
 			 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F8EEE7), to(#F8EEE7));
 			 */
-			 border: 1px solid #0F0;
+			 border: 1px solid var(--text-color);
 			 padding: 4px 9px 4px 9px;
 
 			 -moz-border-radius: 5px 5px 5px 5px;
@@ -166,12 +172,12 @@ h1 {
 		 width: calc(100% - 20px);
 		 margin: 5px;
 		 height: 70px;
-		 border: 1px solid #0F0;
+		 border: 1px solid var(--text-color);
 		 border-radius: 10px 10px 10px 10px;
-		 background-color: rgba(0, 0, 0, 0.8);
+		 background-color: var(--background-color);
 		 display: inline-block;
 		 padding-left: 5px;
-		 color: #0F0;
+		 color: var(--text-color);
 
 }
 
@@ -188,7 +194,7 @@ h1 {
 
 	.semester{
 			 font-size: 18px;
-			 color: #0F0;
+			 color: var(--text-color);
 			 font-weight: 700;
 	}
 	 .small li{
@@ -203,10 +209,10 @@ h1 {
 		 height: 200px;
 		 margin:5px;
 		 padding:5px;
-		 border: 1px solid #0F0;
+		 border: 1px solid var(--text-color);
 		 border-radius: 10px 10px 10px 10px;
-		 background-color: rgba(0, 0, 0, 0.8);
-		 color: #0F0;
+		 background-color: var(--background-color);
+		 color: var(--text-color);
 	 }
 
 		#bottum .missing {
@@ -215,10 +221,10 @@ h1 {
 		 height: 100%;
 		 margin:5px;
 		 padding:5px;
-		 border: 1px solid #0F0;
+		 border: 1px solid var(--text-color);
 		 border-radius: 10px 10px 10px 10px;
-		 background-color: rgba(0, 0, 0, 0.8);
-		 color: #0F0;
+		 background-color: var(--background-color);
+		 color: var(--text-color);
 	 }
 
 	 #middle .nav {
@@ -228,10 +234,10 @@ h1 {
 		 height: calc(100% - 22px);
 		 margin:5px;
 		 padding:5px;
-		 border: 1px solid #0F0;
+		 border: 1px solid var(--text-color);
 		 border-radius: 10px 10px 10px 10px;
-		 background-color: rgba(0, 0, 0, 0.8);
-		 color: #0F0;
+		 background-color: var(--background-color);
+		 color: var(--text-color);
 	 }
 		.classes .box {
 			width: calc(32% - 15px);
@@ -240,10 +246,10 @@ h1 {
 			height: 148px;
 			margin:5px;
 			padding:5px;
-			border: 1px solid #0F0;
+			border: 1px solid var(--text-color);
 			border-radius: 10px 10px 10px 10px;
-			background-color: rgba(0, 0, 0, 0.8);
-			color: #0F0;
+			background-color: var(--background-color);
+			color: var(--text-color);
 	 }
 
 		.empty {
@@ -253,7 +259,7 @@ h1 {
 		 padding:5px;
 		 border: 1px solid black;
 		 border-radius: 10px 10px 10px 10px;
-		 background-color: rgba(0, 0, 0, 0.8);
+		 background-color: var(--background-color);
 	 }
 
 	 .box li {
@@ -262,8 +268,8 @@ h1 {
 	 }
 
 	 hr{
-		 color: #0F0;
-		 border-color: #0F0;
+		 color: var(--text-color);
+		 border-color: var(--text-color);
 	 }
 
 
@@ -282,10 +288,10 @@ h1 {
 			 left: -999em;
 			 text-align: left;
 			 padding: 2px 2px 2px 2px;
-			 border: 1px solid #0F0;
+			 border: 1px solid var(--text-color);
 			 border-top: none;
 
-			 background: rgba(0, 0, 0, 0.8);
+			 background: var(--background-color);
 			/*background: -moz-linear-gradient(top, #EEEEEE, #BBBBBB);
 			 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from (#EEEEEE), to(#BBBBBB));
 			 */
@@ -307,15 +313,15 @@ h1 {
 		}
 
 		.dropdown1 li:hover{
-			color:#0F0;
+			color:var(--text-color);
 		}
 		.dropdown1 a{
-			color:#0F0;
+			color:var(--text-color);
 		}
 		.dropdown1 a:hover{
-			color:#0F0;
+			color:var(--text-color);
 		}
 		.dropdown1 :hover{
-			color:#0F0;
-			border-color: #0F0;
+			color:var(--text-color);
+			border-color: var(--text-color);
 		}
