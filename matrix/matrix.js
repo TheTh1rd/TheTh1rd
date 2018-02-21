@@ -26,11 +26,12 @@ function load() {
 	}
 
 	//drawing the characters
-	function draw()
-	{
+
+function draw()
+{
 
 		var color = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
-		//document.documentElement.getPropertyValue('--background-color');
+		var backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
 
 		//Black BG for the canvas
 		//translucent BG to show trail
@@ -77,6 +78,7 @@ function validate() {
 	newPage.innerHTML = html;
 
 	loadPlan();
+	//ajaxPlan();
 
 	$("#header").hide();
 	$("#bottum").hide();
@@ -86,6 +88,21 @@ function validate() {
 	$("#header").slideDown(1000).delay(1000);
 	$("#bottum").delay(1500).fadeIn(1000);
 	$("#middle").delay(2500).slideDown(1000);
+}
 
+function ajaxPlan() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "judah/~gallaghd/cs3220/termProject/getCombined.php", true);
+	xhttp.onreadystatechange = onReady;
+	xhttp.send(null);
 
+	alert("got a plan");
+}
+
+function onReady () {
+	if (request.readyState == 4 && this.status == 200) {
+		var plan = xhttp.responseText;
+	}
+
+	alert("made it here");
 }
