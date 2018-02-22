@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Project 3</title>
+
+  <link rel="shortcut icon"  type="image/x-icon" href="../img/stolen_icon.png">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/ju-1.12.1/dt-1.10.16/datatables.min.css"/>
+
+
+
+  <!-- jquery and javascript -->
+  <script src="javascript/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="javascript/project3.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+  <!-- css sheets -->
+  <link type="text/css" rel="stylesheet" href="css/project3.css" />
+
+
+
+  </script>
+
+
+
+</head>
+
+<body onload="load()">
+  <canvas id="matrix"></canvas>
+
+  <!-- center box -->
+  <div id="page">
+    <div class="pad">
+    </div>
+    <div id="login">
+      <div class="inner_pad"></div>
+      <div id="#actual_content">
+        <h1>Log In</h1><br>
+        <form id="myform" name="myForm" onsubmit="validate()">
+          <label for="uname"><b>Username</b><label><br>
+						<input type="text" placeholder="Enter Username" id="uname" name="uname"><br><br>
+						<label for="pwd"><b>Password</b><label><br>
+						<input  type="password"
+								placeholder="Enter Password"
+								id="pwd"
+								name="pwd"
+								title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+								><br><br>
+						<button type="submit">Log In</button>
+					 </form>
+				 </div>
+				 <div class="inner_pad"></div>
+				</div>
+
+				<div class="pad">
+				</div>
+			</div>
+
+<!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+
+
+
+	</body>
+</html>

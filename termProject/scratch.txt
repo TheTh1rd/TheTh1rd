@@ -1,0 +1,109 @@
+//var plan = new Plan("myPlan", "2014", "Computer Engineering", "Ben Wicker", "FA 2018", [], []);
+
+// add courses
+
+// year 1
+// plan.addCourse(new Course("FA", "2014", "EGGN-1110", "The Engineering Profession"));
+// plan.addCourse(new Course("FA", "2014", "CHEM-1050", "Chemistry for Engineers"));
+// plan.addCourse(new Course("FA", "2014", "COM-1100", "Fundamentals of Speech"));
+// plan.addCourse(new Course("FA", "2014", "BGE-1720", "Spiritual Formation"));
+//
+// // year 2
+// plan.addCourse(new Course("SP", "2015", "MATH-1710", "Calculus I"));
+// plan.addCourse(new Course("SP", "2015", "MATH-1720", "Calculus II"));
+// plan.addCourse(new Course("SP", "2015", "PHYS-2110", "General Physics I"));
+// plan.addCourse(new Course("SP", "2015", "CS-1210", "C++ Programming"));
+//
+// plan.addCourse(new Course("SM", "2015", "MATH-2740", "Differential Equations"));
+// plan.addCourse(new Course("SM", "2015", "BGE-2730", "Old Testament Literature"));
+//
+// plan.addCourse(new Course("FA", "2015", "CS-1220", "OBJ-Oreint Design/C++"));
+// plan.addCourse(new Course("FA", "2015", "EGCP-1010", "Digital Logic Design"));
+// plan.addCourse(new Course("FA", "2015", "EGME-2750", "Statics & Dynamics"));
+// plan.addCourse(new Course("FA", "2015", "PHYS-2120", "General Physics II"));
+//
+// plan.addCourse(new Course("SP", "2016", "CS-2210", "Data Struct Using Java"));
+// plan.addCourse(new Course("SP", "2016", "EGCP-3210", "Computer Architecture"));
+// plan.addCourse(new Course("SP", "2016", "EGEE-2010", "Circuits"));
+// plan.addCourse(new Course("SP", "2016", "MATH-2510", "Discrete Math"));
+//
+// // year 3
+// plan.addCourse(new Course("FA", "2016", "CS-3410", "Algorithms"));
+// plan.addCourse(new Course("FA", "2016", "EGCP-2120", "Microcontrollers"));
+// plan.addCourse(new Course("FA", "2016", "EGEE-3210", "Electronics I"));
+// plan.addCourse(new Course("FA", "2016", "BTGE-2740", "New Testament"));
+//
+// plan.addCourse(new Course("SM", "2016", "HUM-1400", "Intro to Humanities"));
+//
+//
+// // year 4
+// plan.addCourse(new Course("FA", "2017", "BTGE-3755", "Theology I"));
+// plan.addCourse(new Course("FA", "2017", "EGCP-4210", "Adv Computer Architecture"));
+// plan.addCourse(new Course("FA", "2017", "EGCP-4810", "Sr Design"));
+// plan.addCourse(new Course("FA", "2017", "EGGN-4010", "Senior Seminar"));
+//
+// plan.addCourse(new Course("SP", "2017", "CS-3310", "Operating Systems"));
+// plan.addCourse(new Course("SP", "2017", "EGCP-3010", "Adv Digital Logic Design"));
+// plan.addCourse(new Course("SP", "2017", "EGGN-3110", "Professional Ethics"));
+// plan.addCourse(new Course("SP", "2017", "EGCP-4250", "CMOS VLSI Design"));
+//
+// plan.addCourse(new Course("SM", "2017", "GBIO-1000", "Prin of Biology"));
+//
+//
+// plan.addCourse(new Course("SP", "2018", "BTGE-3765", "Theology II"));
+// plan.addCourse(new Course("SP", "2018", "MATH-3110", "Prob & Stats"));
+// plan.addCourse(new Course("SP", "2018", "EGCP-4820", "Sr Design"));
+// plan.addCourse(new Course("SP", "2018", "EGME-3170", "Thermal Systems"));
+
+
+
+
+
+
+
+
+
+
+
+function loadHtml(plan) {
+	var html = "<!-- generated html -->";
+	var year = 0;
+
+	// iterate through each year
+	for (i = 0; i < plan.years.length; i++){
+		year = plan.years[i];
+
+		html += "<div class=\"year\">";
+
+		// fall
+		html += "<div class=\"semester\">";
+		html += "<p class=\"alignleft\"><b>Fall " + year.year + "</b></p>";
+		html += "<p class=\"alignright\">Hours: xx</p><ul>";
+		for (j = 0; j < year.FA.length; j++) {
+			html += "<li>- " + year.FA[j].id + " " + year.FA[j].name + "</li>";
+		}
+		html += "</ul></div>";
+
+		// spring
+		html += "<div class=\"semester\">";
+		html += "<p class=\"alignleft\"><b>Spring " + (parseInt(year.year) + 1) + "</b></p>";
+		html += "<p class=\"alignright\">Hours: xx</p><ul>";
+		for (j = 0; j < year.SP.length; j++) {
+			html += "<li>- " + year.SP[j].id + " " + year.SP[j].name + "</li>";
+		}
+		html += "</ul></div>";
+
+		// summer
+		html += "<div class=\"semester\">";
+		html += "<p class=\"alignleft\"><b>Summer " + (parseInt(year.year) + 1)+ "</b></p>";
+		html += "<p class=\"alignright\">Hours: xx</p><ul>";
+		for (j = 0; j < year.SM.length; j++) {
+			html += "<li>- " + year.SM[j].id + " " + year.SM[j].name + "</li>";
+		}
+		html += "</ul></div>";
+
+		html += "</div>";
+	}
+
+	return html;
+}
