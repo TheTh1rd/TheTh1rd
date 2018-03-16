@@ -1,0 +1,11 @@
+// while($row = $result->fetch_assoc()) {
+//     echo " name: " . $row["user_name"];
+//     echo " password: " . $row["password"];
+// }
+
+
+get result...?
+
+session within get combined
+
+default padding 
